@@ -31,7 +31,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <10 11>;
         };
     };
 
@@ -41,6 +41,27 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        horipu: horipu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
+            label = "HORIPU";
+        };
+
+        Horipu0811: Horipu0811 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp O &kp R &kp I &kp P &kp U &kp N0 &kp N8 &kp N1 &kp N1>;
+            label = "HORIPU0811";
+        };
+
+        Horipu630811: Horipu630811 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp O &kp R &kp I &kp P &kp U &kp N6 &kp N3 &kp N0 &kp N8 &kp N1 &kp N1>;
+            label = "HORIPU630811";
         };
     };
 
@@ -69,6 +90,13 @@
 
             tap-ms = <20>;
         };
+
+        zoom: zoom {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ZOOM";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_AC_ZOOM_IN>, <&kp C_AC_ZOOM_OUT>;
+        };
     };
 
     keymap {
@@ -93,7 +121,7 @@
 &kp EQUAL   &kp N0  &kp PERIOD  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_ALT    &kp ENTER       &mt BACKSPACE BACKSPACE                                                   &to 0
             >;
 
-            sensor-bindings = <&scroll_right_left>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
