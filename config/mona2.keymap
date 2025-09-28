@@ -179,8 +179,8 @@
         compatible = "zmk,conditional-layers";
 
         mouse {
-            if-layers = <5>;
-            then-layer = <0>;
+            if-layers = <0>;
+            then-layer = <5>;
         };
     };
 };
