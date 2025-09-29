@@ -91,7 +91,6 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
-            label = "SCROLL_UP_DOWN";
         };
     };
 
