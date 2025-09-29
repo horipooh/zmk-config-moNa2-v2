@@ -100,9 +100,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W             &kp E         &kp R                   &kp T                                                            &kp Y            &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S             &kp D         &kp F                   &mt LEFT_ALT G                           &kp MINUS               &kp H            &kp J  &lt 6 K    &kp L    &lt 6 ENTER
+&kp A             &kp S             &kp D         &kp F                   &mt LEFT_ALT G                           &kp MINUS               &kp H            &kp J  &lt 2 K    &kp L    &lt 2 ENTER
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                   &kp B           &mt SPACE EXCLAMATION    &kp QUESTION            &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG1  &lt 1 SPACE     &lt 6 LANG2              &lt_to_layer_0 6 ENTER  &lt 1 BACKSPACE                             &lt 4 ESC
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG1  &lt 1 SPACE     &lt 2 LANG2              &lt_to_layer_0 2 ENTER  &lt 1 BACKSPACE                             &lt 4 ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -121,10 +121,10 @@
 
         layer_2 {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp POUND          &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp MINUS  &kp UNDERSCORE
-&kp GRAVE        &kp TILDE    &kp DOUBLE_QUOTES  &kp SQT     &trans                  &trans   &mkp MB3   &mkp MB1       &mkp MB2      &kp EQUAL  &kp PLUS
-&kp F1           &kp F2       &kp F3             &kp F4      &kp F5       &kp F11    &kp F12  &kp F6     &kp F7         &kp F8        &kp F9     &kp F10
-&trans           &trans       &trans             &trans      &trans       &trans     &trans   &trans                                             &trans
+&trans  &trans  &trans         &kp RG(F10)  &kp LG(LA(LS(SEMI)))                                  &horipu  &Horipu0811  &Horipu630811  &trans    &trans
+&trans  &trans  &trans         &trans       &kp LG(LA(LS(N0)))                            &trans  &trans   &mkp MB1     &trans         &mkp MB2  &trans
+&trans  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LS(LG(NUMBER_4))    &trans  &trans   &trans       &trans         &trans    &trans
+&trans  &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &trans                                         &to 0
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -165,22 +165,15 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMICOLON)))                                  &horipu  &Horipu0811         &Horipu630811       &trans               &trans
-&trans  &trans  &trans         &trans       &kp LS(LA(LG(N0)))                                 &trans  &trans   &mkp MB1            &kp RC(UP_ARROW)    &mkp MB2             &trans
-&trans  &trans  &Horipu630811  &Horipu0811  &horipu                    &kp LG(LS(NUMBER_4))    &trans  &trans   &kp RC(LEFT_ARROW)  &kp RC(DOWN_ARROW)  &kp RC(RIGHT_ARROW)  &trans
-&trans  &trans  &trans         &trans       &kp SPACE                  &trans                  &trans  &trans                                                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &to 0
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        mouse {
-            if-layers = <0>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
