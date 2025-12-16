@@ -46,7 +46,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;  //P0.09を指定(CS)
 
- trackball_central: trackball_central@0 {
+    trackball_central: trackball_central@0 {
         status = "okay";
         compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         reg = <0>;
@@ -56,13 +56,15 @@
         //swap-xy;
         invert-x; //COROPIT版ではコメントアウトを外す
         invert-y; //COROPIT版ではコメントアウトを外す
-       zephyr,axis-x {
+        
+        zephyr,axis-x {
             input-codes = <INPUT_REL_X>;
         };
         zephyr,axis-y {
             input-codes = <INPUT_REL_Y>;
         };
     };
+}; /* ←【修正箇所】ここに「};」が無かったのがエラーの原因でした！ */
 
 
 // Overrides for the input listener node
@@ -75,7 +77,7 @@
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-            //<&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
+            //<&zip_xy_to_scroll_mapper>,                       //スクロールモードに変更
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
     };
