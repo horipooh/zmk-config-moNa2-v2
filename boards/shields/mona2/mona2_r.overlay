@@ -56,11 +56,13 @@
         //swap-xy;
         invert-x; //COROPIT版ではコメントアウトを外す
         invert-y; //COROPIT版ではコメントアウトを外す
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+       zephyr,axis-x {
+            input-codes = <INPUT_REL_X>;
+        };
+        zephyr,axis-y {
+            input-codes = <INPUT_REL_Y>;
+        };
     };
-};
 
 
 // Overrides for the input listener node
