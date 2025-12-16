@@ -64,8 +64,7 @@
             input-codes = <INPUT_REL_Y>;
         };
     };
-}; /* ←【修正箇所】ここに「};」が無かったのがエラーの原因でした！ */
-
+}; 
 
 // Overrides for the input listener node
 &trackball_central_listener {
