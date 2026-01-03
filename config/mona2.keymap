@@ -116,7 +116,7 @@
 &kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG1  &space_to_L1 1 SPACE  &lt 2 LANG2              &lt_to_layer_0 2 ENTER  &lt 1 BACKSPACE                             &lt 4 ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         layer_1 {
