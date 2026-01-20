@@ -70,7 +70,7 @@
     device = <&trackball_central>;
 
     scroller {
-        layers = <3>;
+        layers = <6>;
         input-processors = 
             // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
@@ -81,20 +81,3 @@
 
 };
 
-/* ▼▼▼ ここがスクロール設定のキモです ▼▼▼ */
-&trackball_central_listener {
-    status = "okay";
-    device = <&trackball_central>;
-
-    scroller {
-        /* 重要：スクロールさせたいレイヤー番号を指定 */
-        /* デフォルトは 5 になっています。ご自身のキーマップに合わせて数字を変えてください */
-        layers = <6>; 
-        
-        input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,      /* 縦横の入れ替え（操作感に合わせて削除可） */
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,     /* X軸反転（操作感に合わせて削除可） */
-            <&zip_xy_to_scroll_mapper>,                       /* ★これが必要！移動をスクロールに変換 */
-            <&zip_scroll_scaler 1 4>;                         /* スピード調整（1/4倍速にする） */
-    };
-};
