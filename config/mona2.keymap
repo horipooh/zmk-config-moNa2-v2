@@ -28,11 +28,6 @@
             bindings = <&kp TAB>;
             key-positions = <10 11>;
         };
-
-        app_change {
-            bindings = <&app_change>;
-            key-positions = <10 11 36>;
-        };
     };
 
     macros {
@@ -184,7 +179,7 @@
 &trans   &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &trans                                                                   &to 0
             >;
 
-            sensor-bindings = <&scroll_right_left>;
+            sensor-bindings = <&inc_dec_kp LC(LEFT_ARROW) RC(RIGHT_ARROW)>;
         };
 
         layer_4 {
