@@ -69,6 +69,10 @@
     status = "okay";
     device = <&trackball_central>;
 
+    // ボールを動かしたら自動でレイヤー5（マウス）へ、離して500msで復帰
+    input-processors = <&zip_temp_layer 5 500>; 
+
+    // レイヤー6にいるときだけボールの動きをスクロールに変換
     scroller {
         layers = <6>;
         input-processors = 
