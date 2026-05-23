@@ -162,10 +162,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                 &kp LA(LC(LEFT_ARROW))   &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
-&trans  &trans  &trans  &trans  &trans                 &kp COLON       &kp LEFT_PARENTHESIS     &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
-&trans  &trans  &trans  &trans  &trans  &kp AT_SIGN    &kp UNDERSCORE  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans          &mt BACKSPACE BACKSPACE                                                      &trans
+&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                    &kp LA(LC(LEFT_ARROW))   &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
+&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                  &kp COLON       &kp LEFT_PARENTHESIS     &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON  &kp AT_SIGN    &kp UNDERSCORE  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &trans
+&trans  &kp N0        &kp PERIOD    &trans        &trans     &trans         &trans          &mt BACKSPACE BACKSPACE                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -173,10 +173,10 @@
 
         macro {
             bindings = <
-&trans  &trans  &trans         &kp RG(F10)  &kp LG(LA(LS(SEMI)))                                      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp COLON  &trans
-&trans  &trans  &trans         &trans       &kp LG(LA(LS(N0)))                            &trans      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
-&trans  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LS(LG(NUMBER_4))    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans
-&trans  &trans  &trans         &trans       &trans                &trans                  &trans      &kp NUMBER_0                                         &to 0
+&trans  &trans  &trans         &kp RG(F10)  &kp LG(LA(LS(SEMI)))                                        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp COLON  &trans
+&trans  &trans  &trans         &trans       &kp LG(LA(LS(N0)))                            &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
+&trans  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LS(LG(NUMBER_4))    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans
+&trans  &trans  &trans         &trans       &trans                &trans                  &trans        &trans                                               &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LEFT_ARROW) RC(RIGHT_ARROW)>;
