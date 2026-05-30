@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001'
+    environment:
+      PORT: 3001
+      CORS_ORIGIN: http://localhost:5173
+      GOOGLE_MAPS_API_KEY: ${GOOGLE_MAPS_API_KEY:-}
+      TWITTER_BEARER_TOKEN: ${TWITTER_BEARER_TOKEN:-}
+      MOCK_SCRAPERS: ${MOCK_SCRAPERS:-true}
+      MOCK_TWITTER: ${MOCK_TWITTER:-true}
+      MOCK_GEOCODING: ${MOCK_GEOCODING:-true}
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '5173:80'
+    depends_on:
+      - backend
+    restart: unless-stopped
