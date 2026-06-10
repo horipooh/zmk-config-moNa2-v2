@@ -173,10 +173,10 @@
 
         macro {
             bindings = <
-&kp LS(LA(LC(LG(MINUS))))  &trans  &trans         &kp RG(F10)  &kp LG(LA(LS(SEMI)))                                              &trans               &trans              &trans              &trans               &trans
-&trans                     &trans  &trans         &trans       &kp LG(LA(LS(N0)))                            &trans              &trans               &mkp MB1            &kp LC(UP_ARROW)    &mkp MB2             &trans
-&trans                     &trans  &Horipu630811  &Horipu0811  &horipu               &kp LS(LG(NUMBER_4))    &kp LC(UP_ARROW)    &trans               &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
-&trans                     &trans  &trans         &trans       &trans                &trans                  &kp LC(LEFT_ARROW)  &kp RC(RIGHT_ARROW)                                                               &trans
+&kp LS(LA(LC(LG(MINUS))))  &trans          &kp UP_ARROW    &kp RG(F10)      &kp LG(LA(LS(SEMI)))                                              &trans               &trans              &trans              &trans               &trans
+&trans                     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(LA(LS(N0)))                            &trans              &trans               &mkp MB1            &kp LC(UP_ARROW)    &mkp MB2             &trans
+&trans                     &trans          &Horipu630811   &Horipu0811      &horipu               &kp LS(LG(NUMBER_4))    &kp LC(UP_ARROW)    &trans               &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
+&trans                     &trans          &trans          &trans           &trans                &trans                  &kp LC(LEFT_ARROW)  &kp RC(RIGHT_ARROW)                                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LEFT_ARROW) RC(RIGHT_ARROW)>;
