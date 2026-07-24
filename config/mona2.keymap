@@ -152,7 +152,7 @@
         ZFold {
             bindings = <
 &trans  &trans  &trans  &trans                  &trans                    &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans            &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans            &trans  &trans         &trans  &trans  &trans  &kp RS(ENTER)
 &trans  &trans  &trans  &trans                  &trans  &trans    &trans  &trans         &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &mt LEFT_CONTROL LANG1  &trans  &trans    &trans  &kp BACKSPACE                          &trans
             >;
