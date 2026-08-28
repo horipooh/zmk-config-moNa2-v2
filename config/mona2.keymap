@@ -162,10 +162,10 @@
 
         layer_1 {
             bindings = <
-&kp LA(MINUS)  &kp N7        &kp N8        &kp N9        &kp COLON                      &kp LA(LC(LEFT_ARROW))  &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
-&kp PLUS       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp HASH             &trans    &kp LEFT_PARENTHESIS    &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
-&kp COMMA      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp AT     &trans    &trans    &kp RIGHT_PARENTHESIS   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp UNDER
-&kp PERCENT    &kp N0        &kp PERIOD    &trans        &trans     &trans    &kp EXCL  &kp QUESTION                                                                &trans
+&kp LA(MINUS)  &kp N7        &kp N8        &kp N9        &kp COLON                    &kp LA(LC(LEFT_ARROW))  &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
+&kp PLUS       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp HASH             &trans  &kp LEFT_PARENTHESIS    &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
+&kp COMMA      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp AT     &trans    &trans  &kp RIGHT_PARENTHESIS   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp UNDER
+&kp PERCENT    &kp N0        &kp PERIOD    &trans        &trans     &trans    &trans  &trans                                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
