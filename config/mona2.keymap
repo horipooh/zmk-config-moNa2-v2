@@ -140,7 +140,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E         &kp R                   &kp T                                              &kp Y            &kp U  &kp I      &kp O    &kp P
+&mt ESC Q         &kp W             &kp E         &kp R                   &kp T                                              &kp Y            &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S             &kp D         &kp F                   &kp G                                &kp MINUS     &kp H            &kp J  &lt 6 K    &kp L    &lt 2 ENTER
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                   &kp B                 &kp EXCL       &kp QUESTION  &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG1  &space_to_L1 2 SPACE  &lt 3 LANG2    &lt 2 ENTER   &lt 2 BACKSPACE                             &lt 4 RS(RA(RC(RG(F))))
@@ -151,10 +151,10 @@
 
         ZFold {
             bindings = <
-&trans  &trans  &trans  &trans                  &trans                    &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans            &trans  &trans         &trans  &trans  &trans  &kp RS(ENTER)
-&trans  &trans  &trans  &trans                  &trans  &trans    &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &mt LEFT_CONTROL LANG1  &trans  &trans    &trans  &kp BACKSPACE                          &trans
+&trans  &trans  &trans  &trans                  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &trans  &kp RS(ENTER)
+&trans  &trans  &trans  &trans                  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mt LEFT_CONTROL LANG1  &trans  &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -162,10 +162,10 @@
 
         layer_1 {
             bindings = <
-&kp ESC  &kp N7        &kp N8        &kp N9        &kp COMMA                                 &kp LA(LC(LEFT_ARROW))   &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
-&trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS                  &kp COLON       &kp LEFT_PARENTHESIS     &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
-&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON  &kp AT_SIGN    &kp UNDERSCORE  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &trans
-&trans   &kp N0        &kp PERIOD    &trans        &trans     &trans         &trans          &mt BACKSPACE BACKSPACE                                                      &trans
+&kp ESC      &kp N7        &kp N8        &kp N9        &kp COLON                      &kp LA(LC(LEFT_ARROW))  &kp LA(LC(D))   &kp LA(LC(ENTER))  &kp LA(LC(T))    &kp LA(LC(RIGHT_ARROW))
+&kp PLUS     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp HASH             &trans    &kp LEFT_PARENTHESIS    &mkp MB1        &kp UP_ARROW       &mkp MB2         &trans
+&kp COMMA    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp AT     &trans    &trans    &kp RIGHT_PARENTHESIS   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp UNDER
+&kp PERCENT  &kp N0        &kp PERIOD    &trans        &trans     &trans    &kp EXCL  &kp QUESTION                                                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
